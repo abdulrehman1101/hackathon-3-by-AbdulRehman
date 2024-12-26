@@ -146,7 +146,7 @@ export default function page() {
                 <CardDescription>Sedan</CardDescription>
               </CardHeader>
               <CardContent className="w-full flex flex-col items-center justify-center gap-4">
-                <Image src={"/car (2).png"} alt="" width={220} height={68} />
+                <Image src={"/Car (2).png"} alt="" width={220} height={68} />
                 <Image src={"/Spesification.png"} alt="" width={256} height={24} />
               </CardContent>
               <CardFooter className="w-full flex items-center justify-between">

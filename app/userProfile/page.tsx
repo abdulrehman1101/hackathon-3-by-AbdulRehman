@@ -147,7 +147,7 @@ export default function Home() {
                     tag: "Sport Car",
                     date: "18 July",
                     price: "$96.00",
-                    img: "/car (2).png",
+                    img: "/Car (2).png",
                   },
                   {
                     name: "CR - V",
