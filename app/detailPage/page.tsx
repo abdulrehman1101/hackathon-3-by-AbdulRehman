@@ -16,7 +16,7 @@ import Sidebar from "../components/Slidebar";
 export default function page() {
   return (
     <div className="max-w-[1440px] mx-auto w-full flex">
-      <div className=" first  w-[25%]">
+      <div className=" first w-[25%]">
         <Sidebar />
       </div>
       <div className="sec w-full sm:w-[75%] bg-[#f6f7f9] p-4 sm:p-6  flex flex-col gap-10 font-[family-name:var(--font-geist-sans)]">

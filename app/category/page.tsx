@@ -21,7 +21,7 @@ export default function Page() {
   };
 
   return (
-    <div className="w-full flex">
+    <div className="max-w-[1440px] mx-auto w-full flex">
       {/* sidebar  */}
       <div className="first  w-[25%]">
         <Sidebar />
