@@ -348,7 +348,7 @@ import { useSearchParams } from "next/navigation";
 import Image from 'next/image';
 import { Suspense } from 'react';
 
-const Payment = () => {
+const Checkout = () => {
   const searchParams = useSearchParams();
   
   // Get query parameters
@@ -571,7 +571,7 @@ const Payment = () => {
 // Wrap the Payment component in Suspense
 const PaymentPage = () => (
   <Suspense fallback={<div>Loading payment details...</div>}>
-    <Payment />
+    <Checkout />
   </Suspense>
 );
   
