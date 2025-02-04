@@ -122,6 +122,7 @@ function CarDetailsPage({ productId }: { productId: string; }) {
                                 <Link
                                     href={{
                                         pathname: "/Payment",
+                                        
                                         query: {
                                             name: productDetails.name,
                                             type: productDetails.type,
