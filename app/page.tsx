@@ -8,6 +8,7 @@ const page = () => {
   return (
     <div>
       <Hero/>
+      
       <Hero1/>
       <CarCards/>
       <Recomend/>
