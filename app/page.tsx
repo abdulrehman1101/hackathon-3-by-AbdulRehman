@@ -1,18 +1,18 @@
-import { Card } from "@/componet/ui/Card";
-import Hero from "./components/Hero";
-import Midhero from "./components/Midhero";
+import CarCards from '@/components/CarCards'
+import Recomend from '@/components/Cars'
+import Hero from '@/components/Hero'
+import Hero1 from '@/components/Hero1'
+import React from 'react'
 
-
-export default function Home() {
+const page = () => {
   return (
     <div>
-       
-       <Hero />
-       <Midhero />
-       {/* <Card /> */}
-       {/* <Input /> */}
-
+      <Hero/>
+      <Hero1/>
+      <CarCards/>
+      <Recomend/>
     </div>
-    
-  );
+  )
 }
+
+export default page

@@ -1,62 +1,55 @@
 import React from 'react';
-import { FaHeart, FaBell, FaSearch, FaCog } from 'react-icons/fa';
-import { VscSettings } from "react-icons/vsc";
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import { FiSearch, FiSettings, FiHeart, FiBell } from "react-icons/fi";
 
 const Header = () => {
   return (
-    <header className="max-w-[1440px] mx-auto w-full bg-white py-4 px-4 md:px-8 shadow-md flex flex-wrap items-center justify-between">
-      {/* Logo and Search Bar Container */}
+    <div className="max-w-[1440px] mx-auto w-full bg-white py-4 px-4 md:px-8 shadow-md flex flex-wrap items-center justify-between">
       <div className="flex items-center space-x-4 lg:space-x-60 w-full lg:w-auto">
         {/* Logo */}
-        <div className="text-xl md:text-2xl font-bold text-blue-600">MORENT</div>
-        
-        {/* Search Bar */}
-        <div className="hidden sm:flex relative w-full sm:w-[150px] md:w-[200px] lg:w-[492px] h-[44px] mt-2 lg:mt-0">
+        <h1 className="font-bold text-[30px] sm:text-[40px] text-[#3563E9]">
+          <Link href="/">MORENT</Link>
+        </h1>
+
+        {/* Profile icon for mobile */}
+        <button className="text-gray-500 sm:hidden">
+        <Image src="/Prof.svg" alt="profile" width={44} height={44} />
+        </button>
+      </div>
+
+      {/* Search Bar - Visible on all screens */}
+      <div className="w-full sm:w-auto sm:flex-grow sm:max-w-2xl mb-4 sm:mb-0 sm:mx-4">
+        <div className="flex items-center border rounded-full p-2 w-full">
+          <FiSearch className="text-gray-500 w-5 h-5 ml-2" />
           <input
             type="text"
             placeholder="Search something here"
-            className=" w-full h-full border rounded-full py-2 px-4 pl-12 pr-12 text-sm border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            style={{ borderRadius: '70px' }}
+            className="w-full outline-none bg-transparent placeholder:text-sm mx-2"
           />
-          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <FaSearch />
-          </div>
-          <div className="absolute text-2xl right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <VscSettings />
-          </div>
+          <FiSettings className="text-gray-500 w-7 h-7 mr-2" />
         </div>
-          {/* Icons */}
-      <div className="flex items-center space-x-2 mt-4 md:mt-0">
-        <Link href="/">
-          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center">
-            <FaHeart className="text-lg md:text-xl text-gray-600 cursor-pointer" />
-          </div>
-        </Link>
-        <Link href="/">
-          <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center">
-            <FaBell className="text-lg md:text-xl text-gray-600 cursor-pointer" />
-            <span className="absolute top-1 right-0 w-3 h-3 bg-red-500 rounded-full"></span>
-          </div>
-        </Link>
-        <Link href="/">
-          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center">
-            <FaCog className="text-lg md:text-xl text-gray-600 cursor-pointer" />
-          </div>
-        </Link>
+      </div>
 
-        {/* Profile Picture */}
-        <Link href="/userProfile">
+      {/* Right-aligned icons */}
+      <div className="hidden sm:flex items-center space-x-4">
+        <button className="text-gray-500">
+          <FiHeart size={32} />
+        </button>
+        <button className="text-gray-500">
+          <FiBell size={32} />
+        </button>
+        <button className="text-gray-500">
+          <FiSettings size={32} />
+        </button>
+         {/* Profile Picture */}
+         <Link href="/userProfile">
           <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center overflow-hidden cursor-pointer">
             <Image src="/profile.png" alt="Profile" width={40} height={40} />
           </div>
         </Link>
       </div>
-      </div>
-
-    
-    </header>
+    </div>
   );
 };
 
